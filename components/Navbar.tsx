@@ -49,13 +49,13 @@ export default function Navbar() {
       <nav className="container flex h-16 items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl ring-1 ring-white/15">
+          <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-white/15">
             <Image
               src={SITE.LOGO}
               alt={`${SITE.COMPANY_NAME} logo`}
               fill
               sizes="40px"
-              className="object-cover"
+              className="object-contain p-0.5"
             />
           </span>
           <span className="text-lg font-extrabold tracking-tight text-white">

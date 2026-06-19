@@ -6,7 +6,7 @@ export const SITE = {
   COMPANY_NAME: "MA Apparel Pro",
   DOMAIN: "maapparelpro.com",
   TAGLINE: "Custom Sports Uniforms — Designed, Sublimated & Delivered Worldwide",
-  LOGO: "/details/logo.png",
+  LOGO: "/ma logo.png",
   // Raw international format, no spaces or symbols (used in wa.me link)
   WHATSAPP_NUMBER: "+92XXXXXXXXXX",
   BUSINESS_EMAIL: "sales@maapparelpro.com",
