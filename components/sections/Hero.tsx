@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="bg-grid mask-fade-y absolute inset-0 opacity-60" />
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-32 left-1/4 h-[36rem] w-[36rem] animate-aurora rounded-full bg-brand/20 blur-[130px]" />
-        <div className="absolute -top-20 right-1/4 h-[30rem] w-[30rem] animate-float-slow rounded-full bg-sky-500/10 blur-[130px]" />
+        <div className="absolute -top-20 right-1/4 h-[30rem] w-[30rem] animate-float-slow rounded-full bg-brand-light/10 blur-[130px]" />
         <div className="absolute bottom-0 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 animate-aurora rounded-full bg-brand/10 blur-[120px]" />
       </div>
 

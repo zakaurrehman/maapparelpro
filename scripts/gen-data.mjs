@@ -12,18 +12,18 @@ const PUBLIC = join(ROOT, "public");
 
 // folder name -> category meta (order defines display order)
 const CATS = [
-  { folder: "american football uniform", slug: "american-football", name: "American Football", icon: "Shield", gradient: "from-emerald-500/25 to-brand/5", cover: "AMERICAN FOOTBALL.png" },
+  { folder: "american football uniform", slug: "american-football", name: "American Football", icon: "Shield", gradient: "from-amber-500/25 to-brand/5", cover: "AMERICAN FOOTBALL.png" },
   { folder: "basketball uniform", slug: "basketball", name: "Basketball", icon: "Dribbble", gradient: "from-orange-500/25 to-brand/5", cover: "BASKETBALL.png" },
-  { folder: "baseball uniform", slug: "baseball", name: "Baseball", icon: "CircleDot", gradient: "from-amber-500/25 to-brand/5", cover: "BASEBALL.png" },
-  { folder: "cosser unifrom", slug: "soccer", name: "Soccer", icon: "Goal", gradient: "from-lime-500/25 to-brand/5", cover: "SOCCER.png" },
-  { folder: "softball uniform", slug: "softball", name: "Softball", icon: "CircleDot", gradient: "from-yellow-500/25 to-brand/5", cover: "SOFTBALL.png" },
-  { folder: "volleyball uniform", slug: "volleyball", name: "Volleyball", icon: "Disc", gradient: "from-rose-500/25 to-brand/5", cover: "VOLLEYBALL.png" },
-  { folder: "ice hocky uniform", slug: "ice-hockey", name: "Ice Hockey", icon: "Snowflake", gradient: "from-cyan-500/25 to-brand/5", cover: "ICE HOCKEY.png" },
-  { folder: "lacrosse uniform", slug: "lacrosse", name: "Lacrosse", icon: "Slice", gradient: "from-teal-500/25 to-brand/5", cover: "LACROSSE.png" },
-  { folder: "rugby uniform", slug: "rugby", name: "Rugby", icon: "Swords", gradient: "from-red-500/25 to-brand/5", cover: "RUGBY.png" },
-  { folder: "flag football uniform", slug: "flag-football", name: "Flag Football", icon: "Flag", gradient: "from-violet-500/25 to-brand/5", cover: "FLAG FOOTBALL.png" },
-  { folder: "esports uniform", slug: "esports", name: "Esports", icon: "Gamepad2", gradient: "from-fuchsia-500/25 to-brand/5", cover: "ESPORTS.png" },
-  { folder: "wrestling uniform", slug: "wrestling", name: "Wrestling", icon: "Medal", gradient: "from-sky-500/25 to-brand/5", cover: "WRESTLING.png" },
+  { folder: "baseball uniform", slug: "baseball", name: "Baseball", icon: "CircleDot", gradient: "from-amber-400/25 to-brand/5", cover: "BASEBALL.png" },
+  { folder: "cosser unifrom", slug: "soccer", name: "Soccer", icon: "Goal", gradient: "from-yellow-500/25 to-brand/5", cover: "SOCCER.png" },
+  { folder: "softball uniform", slug: "softball", name: "Softball", icon: "CircleDot", gradient: "from-yellow-400/25 to-brand/5", cover: "SOFTBALL.png" },
+  { folder: "volleyball uniform", slug: "volleyball", name: "Volleyball", icon: "Disc", gradient: "from-rose-400/20 to-brand/5", cover: "VOLLEYBALL.png" },
+  { folder: "ice hocky uniform", slug: "ice-hockey", name: "Ice Hockey", icon: "Snowflake", gradient: "from-amber-200/20 to-brand/5", cover: "ICE HOCKEY.png" },
+  { folder: "lacrosse uniform", slug: "lacrosse", name: "Lacrosse", icon: "Slice", gradient: "from-orange-400/25 to-brand/5", cover: "LACROSSE.png" },
+  { folder: "rugby uniform", slug: "rugby", name: "Rugby", icon: "Swords", gradient: "from-red-500/20 to-brand/5", cover: "RUGBY.png" },
+  { folder: "flag football uniform", slug: "flag-football", name: "Flag Football", icon: "Flag", gradient: "from-amber-500/25 to-brand/5", cover: "FLAG FOOTBALL.png" },
+  { folder: "esports uniform", slug: "esports", name: "Esports", icon: "Gamepad2", gradient: "from-yellow-500/25 to-brand/5", cover: "ESPORTS.png" },
+  { folder: "wrestling uniform", slug: "wrestling", name: "Wrestling", icon: "Medal", gradient: "from-orange-500/25 to-brand/5", cover: "WRESTLING.png" },
 ];
 
 const GROUPS = [

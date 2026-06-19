@@ -76,7 +76,7 @@ gradient, order) is defined at the top of
 | `app/contact/page.tsx` | WhatsApp/Email CTAs + mailto inquiry form |
 | `components/*` | Navbar, Footer, WhatsAppButton, ProductCard, CategoryCard, QuoteModal, SpotlightCard, Flag, etc. |
 
-Design: deep navy `#0A1628` + electric green `#00D563`, Poppins font, fully
+Design: royal gold `#E8B964` on near-black `#0B0B0F`, Poppins font, fully
 responsive, animated aurora/grid backgrounds, scroll reveals, spotlight-hover
 cards, count-up stats, and a floating pulsing WhatsApp button on every page.
 Real SVG flags (via `flag-icons`) render correctly on Windows.

@@ -18,24 +18,27 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // Charcoal / black surfaces (token name kept as `navy` so existing
+        // class names keep working across the whole codebase).
         navy: {
-          DEFAULT: "#0A1628",
-          50: "#1B2A42",
-          100: "#15233A",
-          900: "#060E1A",
+          DEFAULT: "#0B0B0F",
+          50: "#26252B",
+          100: "#16161C",
+          900: "#050506",
         },
+        // Royal gold accent.
         brand: {
-          DEFAULT: "#00D563",
-          dark: "#00B554",
-          light: "#33E083",
+          DEFAULT: "#E8B964",
+          dark: "#C99A45",
+          light: "#FFE3A3",
         },
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 40px rgba(0, 213, 99, 0.25)",
-        card: "0 10px 40px rgba(0, 0, 0, 0.35)",
+        glow: "0 0 40px rgba(232, 185, 100, 0.30)",
+        card: "0 10px 40px rgba(0, 0, 0, 0.45)",
       },
       keyframes: {
         "pulse-ring": {

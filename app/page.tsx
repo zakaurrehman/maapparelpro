@@ -329,7 +329,7 @@ export default function HomePage() {
           <div className="gradient-border relative overflow-hidden p-10 text-center md:p-16">
             <div className="bg-grid mask-fade-y pointer-events-none absolute inset-0 opacity-40" />
             <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 animate-aurora rounded-full bg-brand/15 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 animate-float-slow rounded-full bg-sky-500/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 animate-float-slow rounded-full bg-brand-light/10 blur-3xl" />
             <h2 className="relative text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
               Ready to design your team kit?
             </h2>
