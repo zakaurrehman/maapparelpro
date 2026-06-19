@@ -42,10 +42,10 @@ export default function ProductCard({ product, categoryName }: ProductCardProps)
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="text-base font-bold leading-snug text-white">
+        <h3 className="text-base font-bold leading-snug text-fg">
           {product.name}
         </h3>
-        <p className="mt-1.5 flex-1 text-sm leading-relaxed text-white/55">
+        <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted">
           {product.description}
         </p>
 

@@ -25,7 +25,7 @@ export default function CategoryCard({ category }: { category: Category }) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-100 via-navy-100/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
           <div
             className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-100`}
           />
@@ -44,10 +44,10 @@ export default function CategoryCard({ category }: { category: Category }) {
         {/* Body */}
         <div className="flex flex-1 flex-col p-5">
           <div className="flex items-start justify-between gap-2">
-            <h3 className="text-lg font-bold text-white">{category.name}</h3>
-            <ArrowUpRight className="h-5 w-5 shrink-0 text-white/30 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
+            <h3 className="text-lg font-bold text-fg">{category.name}</h3>
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-fg/30 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand" />
           </div>
-          <p className="mt-1.5 flex-1 text-sm leading-relaxed text-white/60">
+          <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted">
             {category.tagline}
           </p>
           <span className="mt-4 text-sm font-semibold text-brand">

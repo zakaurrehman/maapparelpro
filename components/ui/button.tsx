@@ -10,12 +10,12 @@ const buttonVariants = cva(
         whatsapp:
           "bg-brand text-navy-900 hover:bg-brand-dark hover:shadow-glow active:scale-[0.98]",
         email:
-          "bg-white/10 text-white ring-1 ring-white/20 backdrop-blur hover:bg-white/20 active:scale-[0.98]",
+          "bg-fg/[0.06] text-fg ring-1 ring-line/20 backdrop-blur hover:bg-fg/10 active:scale-[0.98]",
         solid:
-          "bg-white text-navy hover:bg-white/90 active:scale-[0.98]",
+          "bg-fg text-bg hover:bg-fg/90 active:scale-[0.98]",
         outline:
-          "border border-brand/40 text-brand hover:bg-brand/10 active:scale-[0.98]",
-        ghost: "text-white/80 hover:text-white hover:bg-white/5",
+          "border border-brand/50 text-brand hover:bg-brand/10 active:scale-[0.98]",
+        ghost: "text-muted hover:text-fg hover:bg-fg/5",
       },
       size: {
         sm: "h-9 px-4",

@@ -36,7 +36,7 @@ export default function SpotlightCard({
       whileHover={lift ? { y: -6 } : undefined}
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-white/10 bg-navy-100/80 shadow-card",
+        "group relative overflow-hidden rounded-2xl border border-line/10 bg-card shadow-card",
         className
       )}
     >

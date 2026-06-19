@@ -18,27 +18,36 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Charcoal / black surfaces (token name kept as `navy` so existing
-        // class names keep working across the whole codebase).
+        // Fixed dark scale — used for the dark hero/footer bands and for text
+        // placed on top of gold fills.
         navy: {
           DEFAULT: "#0B0B0F",
           50: "#26252B",
           100: "#16161C",
           900: "#050506",
         },
-        // Royal gold accent.
+        // Royal gold accent (deeper tone so it reads on white).
         brand: {
-          DEFAULT: "#E8B964",
-          dark: "#C99A45",
-          light: "#FFE3A3",
+          DEFAULT: "#C9A23F",
+          dark: "#A8842E",
+          light: "#E8C77A",
         },
+        // Semantic, theme-aware tokens (light by default; flip inside
+        // `.section-dark`). Defined via CSS variables in globals.css.
+        bg: "rgb(var(--bg) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        card: "rgb(var(--card) / <alpha-value>)",
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        line: "rgb(var(--line) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 40px rgba(232, 185, 100, 0.30)",
-        card: "0 10px 40px rgba(0, 0, 0, 0.45)",
+        glow: "0 0 40px rgba(201, 162, 63, 0.30)",
+        card: "0 12px 32px rgba(17, 20, 45, 0.08)",
+        "card-dark": "0 12px 40px rgba(0, 0, 0, 0.45)",
       },
       keyframes: {
         "pulse-ring": {

@@ -29,12 +29,12 @@ export default function CategoryExplorer({
       {/* Search */}
       <div className="mx-auto mt-10 max-w-xl">
         <div className="relative">
-          <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/40" />
+          <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted" />
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search categories or products (e.g. football, gloves)…"
-            className="w-full rounded-xl border border-white/10 bg-navy-100 py-3.5 pl-12 pr-4 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-brand/50 focus:ring-2 focus:ring-brand/20"
+            className="w-full rounded-xl border border-line/10 bg-card py-3.5 pl-12 pr-4 text-sm text-fg placeholder:text-muted outline-none transition focus:border-brand/50 focus:ring-2 focus:ring-brand/20"
           />
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function CategoryExplorer({
           </AnimatePresence>
         </motion.div>
       ) : (
-        <div className="mt-16 flex flex-col items-center text-center text-white/50">
+        <div className="mt-16 flex flex-col items-center text-center text-muted">
           <SearchX className="h-10 w-10" />
           <p className="mt-4">No categories match “{query}”.</p>
         </div>

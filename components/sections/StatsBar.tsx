@@ -47,9 +47,9 @@ function Counter({ to, prefix = "", suffix = "" }: { to: number; prefix?: string
 
 export default function StatsBar() {
   return (
-    <section className="relative z-10 border-y border-white/10 bg-navy-100/50 backdrop-blur-xl">
+    <section className="relative z-10 border-y border-line/10 bg-surface backdrop-blur-xl">
       <div className="bg-dots absolute inset-0 opacity-50" />
-      <div className="container relative grid grid-cols-2 divide-white/5 py-10 md:grid-cols-4 md:divide-x">
+      <div className="container relative grid grid-cols-2 divide-line/5 py-10 md:grid-cols-4 md:divide-x">
         {STATS.map(({ Icon, to, prefix, suffix, text, label }, i) => (
           <motion.div
             key={label}
@@ -62,14 +62,14 @@ export default function StatsBar() {
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 ring-1 ring-brand/25">
               <Icon className="h-6 w-6 text-brand" />
             </div>
-            <span className="mt-4 text-3xl font-extrabold tracking-tight text-white">
+            <span className="mt-4 text-3xl font-extrabold tracking-tight text-fg">
               {typeof to === "number" ? (
                 <Counter to={to} prefix={prefix} suffix={suffix} />
               ) : (
                 text
               )}
             </span>
-            <span className="mt-1 text-sm text-white/55">{label}</span>
+            <span className="mt-1 text-sm text-muted">{label}</span>
           </motion.div>
         ))}
       </div>

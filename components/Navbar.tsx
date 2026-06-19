@@ -40,16 +40,16 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "section-dark fixed inset-x-0 top-0 z-50 text-fg transition-all duration-300",
         scrolled
-          ? "border-b border-white/10 bg-navy/80 backdrop-blur-lg"
+          ? "border-b border-line/10 bg-navy/80 backdrop-blur-lg"
           : "bg-transparent"
       )}
     >
       <nav className="container flex h-16 items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl ring-1 ring-white/10">
+          <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl ring-1 ring-line/10">
             <Image
               src={SITE.LOGO}
               alt={`${SITE.COMPANY_NAME} logo`}
@@ -58,13 +58,13 @@ export default function Navbar() {
               className="object-cover"
             />
           </span>
-          <span className="text-lg font-extrabold tracking-tight text-white">
+          <span className="text-lg font-extrabold tracking-tight text-fg">
             {SITE.COMPANY_NAME}
           </span>
         </Link>
 
         {/* Desktop links */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 backdrop-blur-xl md:flex">
+        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-line/10 bg-fg/[0.04] p-1 backdrop-blur-xl md:flex">
           {NAV_LINKS.map((link) => {
             const active =
               link.href === "/"
@@ -76,7 +76,7 @@ export default function Navbar() {
                 href={link.href}
                 className={cn(
                   "relative rounded-full px-4 py-1.5 text-sm font-medium transition-colors",
-                  active ? "text-navy-900" : "text-white/70 hover:text-white"
+                  active ? "text-navy-900" : "text-muted hover:text-fg"
                 )}
               >
                 {active && (
@@ -97,7 +97,7 @@ export default function Navbar() {
           <a
             href={emailLink("Bulk Inquiry")}
             aria-label="Email us"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-white/70 ring-1 ring-white/10 transition hover:text-brand hover:ring-brand/40"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-muted ring-1 ring-line/10 transition hover:text-brand hover:ring-brand/40"
           >
             <Mail className="h-5 w-5" />
           </a>
@@ -115,7 +115,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-fg md:hidden"
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
         >
@@ -130,14 +130,14 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-b border-white/10 bg-navy/95 backdrop-blur-lg md:hidden"
+            className="overflow-hidden border-b border-line/10 bg-navy/95 backdrop-blur-lg md:hidden"
           >
             <div className="container flex flex-col gap-1 py-4">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-lg px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 hover:text-white"
+                  className="rounded-lg px-3 py-3 text-base font-medium text-muted hover:bg-fg/5 hover:text-fg"
                 >
                   {link.label}
                 </Link>

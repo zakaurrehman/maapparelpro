@@ -4,6 +4,24 @@
 
 @layer base {
   :root {
+    /* Light theme (default) */
+    --bg: 255 255 255;
+    --surface: 245 246 248;
+    --card: 255 255 255;
+    --fg: 17 19 24;
+    --muted: 92 99 112;
+    --line: 17 19 28;
+    color-scheme: light;
+  }
+
+  /* Dark bands (hero, navbar, footer) — flips the semantic tokens. */
+  .section-dark {
+    --bg: 11 11 15;
+    --surface: 22 22 28;
+    --card: 22 22 28;
+    --fg: 255 255 255;
+    --muted: 170 174 184;
+    --line: 255 255 255;
     color-scheme: dark;
   }
 
@@ -12,27 +30,21 @@
   }
 
   body {
-    @apply bg-navy text-white antialiased;
+    @apply bg-bg text-fg antialiased;
     background-image:
-      radial-gradient(60% 50% at 50% 0%, rgba(232, 185, 100, 0.12), transparent 70%),
-      radial-gradient(40% 40% at 100% 10%, rgba(232, 185, 100, 0.07), transparent 70%),
-      radial-gradient(40% 40% at 0% 30%, rgba(255, 227, 163, 0.05), transparent 70%);
-    background-attachment: fixed;
+      radial-gradient(60% 50% at 50% 0%, rgba(201, 162, 63, 0.07), transparent 70%),
+      radial-gradient(40% 40% at 100% 8%, rgba(201, 162, 63, 0.05), transparent 70%);
   }
 
   ::selection {
-    @apply bg-brand/30 text-white;
+    @apply bg-brand/30 text-fg;
   }
 }
 
 @layer utilities {
   /* ---- Gradient / text effects ---- */
-  .text-gradient {
-    @apply bg-gradient-to-r from-white via-white to-brand bg-clip-text text-transparent;
-  }
-
   .text-gradient-brand {
-    background-image: linear-gradient(110deg, #C99A45, #E8B964, #FFE3A3, #FFF4D6, #E8B964);
+    background-image: linear-gradient(110deg, #A8842E, #C9A23F, #E8C77A, #F4E0A8, #C9A23F);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
@@ -40,25 +52,25 @@
     @apply animate-gradient-x;
   }
 
-  /* ---- Glassmorphism ---- */
+  /* ---- Glassmorphism (theme-aware) ---- */
   .glass {
-    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+    @apply border border-line/15 bg-fg/[0.04] backdrop-blur-xl;
   }
 
   .glass-strong {
-    @apply border border-white/10 bg-navy-100/70 backdrop-blur-xl;
+    @apply border border-line/10 bg-card/80 backdrop-blur-xl;
   }
 
-  /* ---- Background patterns ---- */
+  /* ---- Background patterns (theme-aware via --fg) ---- */
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgb(var(--fg) / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--fg) / 0.05) 1px, transparent 1px);
     background-size: 56px 56px;
   }
 
   .bg-dots {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-image: radial-gradient(rgb(var(--fg) / 0.07) 1px, transparent 1px);
     background-size: 22px 22px;
   }
 
@@ -72,10 +84,10 @@
     mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   }
 
-  /* ---- Gradient border card (animated) ---- */
+  /* ---- Gradient border card (gold) ---- */
   .gradient-border {
     position: relative;
-    background: rgba(21, 35, 58, 0.7);
+    background: rgb(var(--card));
     border-radius: 1rem;
   }
   .gradient-border::before {
@@ -84,20 +96,19 @@
     inset: 0;
     padding: 1px;
     border-radius: inherit;
-    background: linear-gradient(130deg, rgba(232, 185, 100, 0.55), rgba(255, 255, 255, 0.08) 40%, rgba(255, 227, 163, 0.35));
+    background: linear-gradient(130deg, rgba(201, 162, 63, 0.7), rgba(232, 199, 122, 0.15) 45%, rgba(201, 162, 63, 0.5));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
   }
 
-  /* Shimmer text/skeleton helper */
   .shimmer {
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.05) 25%,
-      rgba(255, 255, 255, 0.15) 50%,
-      rgba(255, 255, 255, 0.05) 75%
+      rgb(var(--fg) / 0.05) 25%,
+      rgb(var(--fg) / 0.12) 50%,
+      rgb(var(--fg) / 0.05) 75%
     );
     background-size: 200% 100%;
     @apply animate-shimmer;
@@ -108,13 +119,13 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #0a1628;
+    background: #eef0f3;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(232, 185, 100, 0.35);
+    background: rgba(201, 162, 63, 0.45);
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(232, 185, 100, 0.6);
+    background: rgba(201, 162, 63, 0.7);
   }
 }

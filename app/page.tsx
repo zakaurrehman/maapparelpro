@@ -152,7 +152,7 @@ export default function HomePage() {
       </section>
 
       {/* Feature images — crafted for performance */}
-      <section className="relative border-y border-white/10 bg-navy-100/40">
+      <section className="relative border-y border-line/10 bg-surface">
         <div className="container py-24">
           <SectionHeading
             eyebrow="Crafted for Performance"
@@ -172,11 +172,11 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-100 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-bold">{f.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/60">
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
                       {f.desc}
                     </p>
                   </div>
@@ -213,7 +213,7 @@ export default function HomePage() {
                       {title}
                     </h3>
                     <p
-                      className={`mt-2 leading-relaxed text-white/60 ${
+                      className={`mt-2 leading-relaxed text-muted ${
                         i === 0 ? "text-base" : "text-sm"
                       }`}
                     >
@@ -236,7 +236,7 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="border-y border-white/10 bg-navy-100/40">
+      <section className="border-y border-line/10 bg-surface">
         <div className="container py-24">
           <SectionHeading
             eyebrow="How It Works"
@@ -255,14 +255,14 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-100 via-navy-100/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                     <span className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-brand text-sm font-bold text-navy-900">
                       {i + 1}
                     </span>
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-white/60">
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
                       {s.desc}
                     </p>
                   </div>
@@ -276,14 +276,14 @@ export default function HomePage() {
       {/* Social proof — countries */}
       <section className="container py-16">
         <Reveal className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-white/50">
+          <p className="text-sm font-semibold uppercase tracking-wider text-muted">
             Trusted by clubs, academies &amp; schools in
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
             {COUNTRIES.map((c) => (
               <div key={c.name} className="flex items-center gap-3">
                 <Flag code={c.code} size={28} />
-                <span className="text-lg font-bold text-white/80">{c.name}</span>
+                <span className="text-lg font-bold text-muted">{c.name}</span>
               </div>
             ))}
           </div>
@@ -304,16 +304,16 @@ export default function HomePage() {
                       <Star key={idx} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-white/70">
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
                     “{t.quote}”
                   </p>
-                  <div className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
+                  <div className="mt-5 flex items-center gap-3 border-t border-line/10 pt-4">
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand/15 text-sm font-bold text-brand ring-1 ring-brand/30">
                       {t.name.charAt(0)}
                     </span>
                     <div>
-                      <p className="font-bold text-white">{t.name}</p>
-                      <p className="text-sm text-white/50">{t.role}</p>
+                      <p className="font-bold text-fg">{t.name}</p>
+                      <p className="text-sm text-muted">{t.role}</p>
                     </div>
                   </div>
                 </div>
@@ -333,7 +333,7 @@ export default function HomePage() {
             <h2 className="relative text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
               Ready to design your team kit?
             </h2>
-            <p className="relative mx-auto mt-4 max-w-xl text-white/65">
+            <p className="relative mx-auto mt-4 max-w-xl text-muted">
               Get free custom mock-ups and a bulk quote in minutes. Minimum order{" "}
               {SITE.MIN_ORDER} pieces — we ship worldwide.
             </p>

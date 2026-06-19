@@ -63,7 +63,7 @@ export default function AboutPage() {
           <h1 className="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl">
             Your custom sports uniform partner
           </h1>
-          <p className="mt-5 text-lg text-white/65">
+          <p className="mt-5 text-lg text-muted">
             {SITE.COMPANY_NAME} designs and manufactures fully sublimated team
             uniforms and apparel for clubs, academies and schools across the
             USA, UK, Europe and worldwide. From free digital mock-ups to
@@ -74,15 +74,15 @@ export default function AboutPage() {
       </section>
 
       {/* Story + Mission */}
-      <section className="border-y border-white/10 bg-navy-100/40">
+      <section className="border-y border-line/10 bg-surface">
         <div className="container grid gap-10 py-20 md:grid-cols-2">
           <Reveal>
-            <div className="rounded-2xl border border-white/10 bg-navy-100 p-8 shadow-card">
+            <div className="rounded-2xl border border-line/10 bg-card p-8 shadow-card">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/15 ring-1 ring-brand/30">
                 <Target className="h-6 w-6 text-brand" />
               </div>
               <h2 className="mt-5 text-2xl font-extrabold">Our Mission</h2>
-              <p className="mt-3 leading-relaxed text-white/65">
+              <p className="mt-3 leading-relaxed text-muted">
                 To give every club, academy and school pro-level custom
                 uniforms at fair, factory-direct pricing — with free design,
                 low minimums and personal service from first sketch to final
@@ -92,12 +92,12 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-white/10 bg-navy-100 p-8 shadow-card">
+            <div className="rounded-2xl border border-line/10 bg-card p-8 shadow-card">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/15 ring-1 ring-brand/30">
                 <Globe2 className="h-6 w-6 text-brand" />
               </div>
               <h2 className="mt-5 text-2xl font-extrabold">Made to Order</h2>
-              <p className="mt-3 leading-relaxed text-white/65">
+              <p className="mt-3 leading-relaxed text-muted">
                 Every order is produced to your exact design — colors, logo,
                 names and numbers. From sublimation and stitching to export and
                 worldwide freight, we handle it all so a complete kit arrives on
@@ -115,7 +115,7 @@ export default function AboutPage() {
           <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl">
             Shipping worldwide
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-muted">
             We proudly supply teams across these key markets and beyond.
           </p>
         </Reveal>
@@ -123,9 +123,9 @@ export default function AboutPage() {
         <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-3">
           {MARKETS.map((m, i) => (
             <Reveal key={m.name} delay={i * 0.05}>
-              <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-navy-100 py-6 shadow-card">
+              <div className="flex items-center justify-center gap-3 rounded-2xl border border-line/10 bg-card py-6 shadow-card">
                 <Flag code={m.code} size={26} />
-                <span className="text-lg font-bold text-white/85">
+                <span className="text-lg font-bold text-muted">
                   {m.name}
                 </span>
               </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
       </section>
 
       {/* Quality assurance */}
-      <section className="border-y border-white/10 bg-navy-100/40">
+      <section className="border-y border-line/10 bg-surface">
         <div className="container py-20">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <Reveal>
@@ -143,7 +143,7 @@ export default function AboutPage() {
               <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl">
                 Quality stitched into every kit
               </h2>
-              <p className="mt-4 leading-relaxed text-white/65">
+              <p className="mt-4 leading-relaxed text-muted">
                 Quality is non-negotiable. We use premium performance fabrics,
                 full-dye sublimation that never cracks or fades, and inspect
                 every order before dispatch — so the kit you design is exactly
@@ -156,7 +156,7 @@ export default function AboutPage() {
                   "Reinforced stitching & multi-stage QC",
                   "Free custom design, branding & full size runs",
                 ].map((point) => (
-                  <li key={point} className="flex items-center gap-3 text-white/75">
+                  <li key={point} className="flex items-center gap-3 text-muted">
                     <ShieldCheck className="h-5 w-5 shrink-0 text-brand" />
                     {point}
                   </li>
@@ -174,12 +174,12 @@ export default function AboutPage() {
                 ].map((s) => (
                   <div
                     key={s.label}
-                    className="rounded-2xl border border-white/10 bg-navy-100 p-6 text-center shadow-card"
+                    className="rounded-2xl border border-line/10 bg-card p-6 text-center shadow-card"
                   >
                     <p className="text-3xl font-extrabold text-brand">
                       {s.value}
                     </p>
-                    <p className="mt-1 text-sm text-white/55">{s.label}</p>
+                    <p className="mt-1 text-sm text-muted">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -200,12 +200,12 @@ export default function AboutPage() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {VALUES.map(({ Icon, title, desc }, i) => (
             <Reveal key={title} delay={i * 0.06}>
-              <div className="h-full rounded-2xl border border-white/10 bg-navy-100 p-6 shadow-card">
+              <div className="h-full rounded-2xl border border-line/10 bg-card p-6 shadow-card">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/15 ring-1 ring-brand/30">
                   <Icon className="h-6 w-6 text-brand" />
                 </div>
                 <h3 className="mt-5 text-lg font-bold">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">
+                <p className="mt-2 text-sm leading-relaxed text-muted">
                   {desc}
                 </p>
               </div>
@@ -220,7 +220,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             Let’s equip your team
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-white/60">
+          <p className="mx-auto mt-4 max-w-xl text-muted">
             Tell us what you need and we’ll send a bulk quote — fast.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

@@ -42,7 +42,7 @@ export default function CategoryPage({
   return (
     <div>
       {/* Hero banner */}
-      <section className="relative overflow-hidden border-b border-white/10">
+      <section className="section-dark relative overflow-hidden border-b border-line/10 text-fg">
         <Image
           src={category.cover}
           alt={`${category.name} uniforms`}
@@ -59,14 +59,14 @@ export default function CategoryPage({
         <div className="container relative py-16">
           <Link
             href="/categories"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-white/60 transition hover:text-brand"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition hover:text-brand"
           >
             <ArrowLeft className="h-4 w-4" />
             All Categories
           </Link>
 
           <div className="mt-6 flex flex-col items-start gap-6 md:flex-row md:items-center">
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-navy/50 backdrop-blur-md">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-line/15 bg-navy/50 backdrop-blur-md">
               <Icon className="h-10 w-10 text-brand" />
             </div>
             <div>
@@ -74,7 +74,7 @@ export default function CategoryPage({
                 {category.name}{" "}
                 <span className="text-gradient-brand">Uniforms</span>
               </h1>
-              <p className="mt-3 max-w-2xl text-white/65">
+              <p className="mt-3 max-w-2xl text-muted">
                 {category.description}
               </p>
             </div>
@@ -102,10 +102,10 @@ export default function CategoryPage({
                 <a
                   key={g.id}
                   href={`#${g.id}`}
-                  className="glass rounded-full px-4 py-2 text-sm font-medium text-white/75 transition hover:border-brand/40 hover:text-white"
+                  className="glass rounded-full px-4 py-2 text-sm font-medium text-muted transition hover:border-brand/40 hover:text-fg"
                 >
                   {g.label}
-                  <span className="ml-1.5 text-white/40">{g.items.length}</span>
+                  <span className="ml-1.5 text-muted">{g.items.length}</span>
                 </a>
               ))}
             </div>
@@ -123,11 +123,11 @@ export default function CategoryPage({
           {category.groups.map((group) => (
             <section key={group.id} id={group.id} className="scroll-mt-24">
               <Reveal>
-                <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-4">
+                <div className="flex items-end justify-between gap-4 border-b border-line/10 pb-4">
                   <h2 className="text-2xl font-extrabold tracking-tight">
                     {group.label}
                   </h2>
-                  <span className="text-sm text-white/45">
+                  <span className="text-sm text-muted">
                     {group.items.length} styles
                   </span>
                 </div>
@@ -152,7 +152,7 @@ export default function CategoryPage({
               <h2 className="mt-5 text-2xl font-extrabold">
                 {category.name} catalog coming soon
               </h2>
-              <p className="mt-3 text-white/60">
+              <p className="mt-3 text-muted">
                 We custom-make {category.name.toLowerCase()} uniforms to order.
                 Send us your design, colors and quantities for a fast quote.
               </p>

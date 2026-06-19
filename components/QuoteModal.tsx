@@ -57,20 +57,20 @@ export default function QuoteModal({
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.92, y: 20, opacity: 0 }}
               transition={{ type: "spring", stiffness: 260, damping: 24 }}
-              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-navy-100 p-7 shadow-card"
+              className="relative w-full max-w-md rounded-2xl border border-line/10 bg-card p-7 shadow-card"
             >
               <button
                 aria-label="Close"
                 onClick={() => setOpen(false)}
-                className="absolute right-4 top-4 text-white/50 transition hover:text-white"
+                className="absolute right-4 top-4 text-muted transition hover:text-fg"
               >
                 <X className="h-5 w-5" />
               </button>
 
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl font-bold text-fg">
                 Request a Bulk Quote
               </h3>
-              <p className="mt-2 text-sm text-white/60">
+              <p className="mt-2 text-sm text-muted">
                 {context ? (
                   <>
                     For <span className="text-brand">{context}</span> —
@@ -100,7 +100,7 @@ export default function QuoteModal({
                 </a>
               </div>
 
-              <p className="mt-5 text-center text-xs text-white/40">
+              <p className="mt-5 text-center text-xs text-muted">
                 {SITE.BUSINESS_EMAIL}
               </p>
             </motion.div>

@@ -31,7 +31,7 @@ export default function SectionHeading({
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 leading-relaxed text-white/60">{subtitle}</p>
+        <p className="mt-4 leading-relaxed text-muted">{subtitle}</p>
       )}
     </Reveal>
   );

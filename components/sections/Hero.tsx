@@ -25,7 +25,7 @@ const FLAGS = ["us", "gb", "ae", "ca", "au"];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="section-dark relative overflow-hidden bg-bg text-fg">
       {/* Layered background */}
       <div className="bg-grid mask-fade-y absolute inset-0 opacity-60" />
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -43,7 +43,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
               </span>
-              <span className="font-medium text-white/80">
+              <span className="font-medium text-muted">
                 Trusted by 500+ clubs worldwide
               </span>
             </div>
@@ -60,7 +60,7 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/65"
+            className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-muted"
           >
             Fully sublimated team kits, jerseys, hoodies &amp; accessories for
             clubs, academies &amp; schools worldwide. Free custom design, low
@@ -92,7 +92,7 @@ export default function Hero() {
           {/* Trust row */}
           <motion.div
             variants={item}
-            className="mt-9 flex flex-col items-center justify-center gap-4 text-sm text-white/55 sm:flex-row sm:gap-7"
+            className="mt-9 flex flex-col items-center justify-center gap-4 text-sm text-muted sm:flex-row sm:gap-7"
           >
             <div className="flex items-center gap-2">
               <div className="flex gap-0.5 text-brand">
@@ -102,7 +102,7 @@ export default function Hero() {
               </div>
               <span>Rated by partners worldwide</span>
             </div>
-            <span className="hidden h-4 w-px bg-white/15 sm:block" />
+            <span className="hidden h-4 w-px bg-fg/15 sm:block" />
             <div className="flex items-center gap-2.5">
               <span className="flex">
                 {FLAGS.map((f) => (
@@ -116,7 +116,7 @@ export default function Hero() {
               </span>
               <span>Shipping to 5+ markets</span>
             </div>
-            <span className="hidden h-4 w-px bg-white/15 sm:block" />
+            <span className="hidden h-4 w-px bg-fg/15 sm:block" />
             <div className="flex items-center gap-2">
               <ShieldCheck className="h-4 w-4 text-brand" />
               <span>Min. order {SITE.MIN_ORDER} pcs</span>
@@ -139,7 +139,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.3 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted"
         >
           <ChevronDown className="h-6 w-6 animate-bounce" />
         </motion.div>

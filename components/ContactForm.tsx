@@ -7,7 +7,7 @@ import { SITE, emailLink } from "@/lib/config";
 import { CATEGORIES } from "@/lib/data";
 
 const inputClass =
-  "w-full rounded-xl border border-white/10 bg-navy-900/60 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition focus:border-brand/50 focus:ring-2 focus:ring-brand/20";
+  "w-full rounded-xl border border-line/15 bg-surface px-4 py-3 text-sm text-fg placeholder:text-muted/70 outline-none transition focus:border-brand/60 focus:ring-2 focus:ring-brand/20";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -43,7 +43,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-white/80">
+          <label className="mb-1.5 block text-sm font-medium text-fg/90">
             Name
           </label>
           <input
@@ -55,7 +55,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-white/80">
+          <label className="mb-1.5 block text-sm font-medium text-fg/90">
             Country
           </label>
           <input
@@ -70,7 +70,7 @@ export default function ContactForm() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-white/80">
+          <label className="mb-1.5 block text-sm font-medium text-fg/90">
             Sport Category
           </label>
           <select
@@ -91,7 +91,7 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-white/80">
+          <label className="mb-1.5 block text-sm font-medium text-fg/90">
             Quantity (min {SITE.MIN_ORDER})
           </label>
           <input
@@ -107,7 +107,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-white/80">
+        <label className="mb-1.5 block text-sm font-medium text-fg/90">
           Message
         </label>
         <textarea
@@ -124,7 +124,7 @@ export default function ContactForm() {
         <Send className="h-5 w-5" />
         Send Inquiry
       </Button>
-      <p className="text-center text-xs text-white/40">
+      <p className="text-center text-xs text-muted">
         Opens your email app addressed to {SITE.BUSINESS_EMAIL}
       </p>
     </form>
