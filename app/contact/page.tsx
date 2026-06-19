@@ -10,6 +10,7 @@ import {
   Package,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import Pinterest from "@/components/icons/Pinterest";
 import ContactForm from "@/components/ContactForm";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -113,8 +114,9 @@ export default function ContactPage() {
               <div className="mt-5 flex gap-3">
                 {[
                   { href: SITE.FACEBOOK_URL, Icon: Facebook, label: "Facebook" },
-                  { href: SITE.LINKEDIN_URL, Icon: Linkedin, label: "LinkedIn" },
                   { href: SITE.INSTAGRAM_URL, Icon: Instagram, label: "Instagram" },
+                  { href: SITE.LINKEDIN_URL, Icon: Linkedin, label: "LinkedIn" },
+                  { href: SITE.PINTEREST_URL, Icon: Pinterest, label: "Pinterest" },
                 ].map(({ href, Icon, label }) => (
                   <a
                     key={label}

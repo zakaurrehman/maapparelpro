@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, MessageCircle, Facebook, Linkedin, Instagram } from "lucide-react";
+import Pinterest from "@/components/icons/Pinterest";
 import { CATEGORIES } from "@/lib/data";
 import { SITE, whatsappLink, emailLink, defaultWhatsAppMessage } from "@/lib/config";
 
@@ -34,8 +35,9 @@ export default function Footer() {
           <div className="mt-5 flex gap-3">
             {[
               { href: SITE.FACEBOOK_URL, Icon: Facebook, label: "Facebook" },
-              { href: SITE.LINKEDIN_URL, Icon: Linkedin, label: "LinkedIn" },
               { href: SITE.INSTAGRAM_URL, Icon: Instagram, label: "Instagram" },
+              { href: SITE.LINKEDIN_URL, Icon: Linkedin, label: "LinkedIn" },
+              { href: SITE.PINTEREST_URL, Icon: Pinterest, label: "Pinterest" },
             ].map(({ href, Icon, label }) => (
               <a
                 key={label}

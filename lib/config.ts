@@ -11,9 +11,10 @@ export const SITE = {
   WHATSAPP_NUMBER: "+92XXXXXXXXXX",
   BUSINESS_EMAIL: "sales@maapparelpro.com",
   MIN_ORDER: 10,
-  FACEBOOK_URL: "#",
-  LINKEDIN_URL: "#",
-  INSTAGRAM_URL: "#",
+  FACEBOOK_URL: "https://www.facebook.com/profile.php?id=61590812950718",
+  LINKEDIN_URL: "https://www.linkedin.com/company/126143947/",
+  INSTAGRAM_URL: "https://www.instagram.com/maapparelofficial_/",
+  PINTEREST_URL: "https://www.pinterest.com/maapparel123/",
 } as const;
 
 /** Strip everything except digits for wa.me links. */
